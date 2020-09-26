@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EntityData
   m_EditorClassIdentifier: 
   maxLives: 2
-  angularVelocity: 200
-  acceleration: 80
-  maxSpeed: 5
-  drag: 5
+  angularVelocity: 250
+  acceleration: 50
+  maxSpeed: 4.5
+  drag: 4

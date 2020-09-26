@@ -541,6 +541,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 469980659}
     m_Modifications:
+    - target: {fileID: 870661902235791950, guid: 7b6608fc25dc91845b2bbe47dbe54145,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870661902235791950, guid: 7b6608fc25dc91845b2bbe47dbe54145,
+        type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4489369473358874719, guid: 7b6608fc25dc91845b2bbe47dbe54145,
         type: 3}
       propertyPath: m_DefaultActionMap
