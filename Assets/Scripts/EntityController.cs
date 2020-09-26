@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class EntityController : MonoBehaviour
 {
     //Inspector Properties
     [FoldoutGroup("References")]
     [SerializeField] new Rigidbody rigidbody;
+    [FoldoutGroup("References")]
+    [SerializeField] Slider slider;
 
     [TabGroup("TabGroup1", "Stats")]
     [HideLabel]
@@ -20,6 +23,10 @@ public class EntityController : MonoBehaviour
     //Logic Variables
     float currentLives;
     Vector2 m_Move;
+    float slingshotTime;
+    float slingshotCooldownTime;
+    bool slingshotOnCooldown;
+    bool onSlingshot;
 
     private void Awake()
     {
@@ -32,30 +39,70 @@ public class EntityController : MonoBehaviour
             rigidbody.drag = stats.Drag;
     }
 
+    private void Update()
+    {
+        if (slingshotOnCooldown)
+        {
+            slingshotCooldownTime -= Time.deltaTime;
+            if (slingshotCooldownTime > 0f)
+            {
+                slingshotCooldownTime = 0f;
+                slingshotOnCooldown = false;
+            }
+        }
+        else
+        {
+            if (onSlingshot)
+            {
+                slingshotTime += Time.deltaTime;
+                if (slingshotTime > stats.ChargeTimer)
+                    slingshotTime = stats.ChargeTimer;
+                slider.value = slingshotTime / stats.ChargeTimer;
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
         //Rotation: m_Move.x [-1...0...1]
         rigidbody.rotation *= Quaternion.Euler(0, 0, -m_Move.x * stats.AngularVelocity * Time.fixedDeltaTime);
 
+        //Movement: m_Move.y [-1...0...1]
+        //If m_Move.y > 0 then the player moves forward
+        //If m_Move.y < 0 then the player charges the slingshot
         if (m_Move.y > 0f)
         {
-            rigidbody.velocity += transform.up * m_Move.y * stats.Acceleration * Time.fixedDeltaTime; //Basic Movement
-        }
-        else
-        {
-            //TODO: "Dash" or Slingshot logic
-        }
+            Vector3 velocity = transform.up * m_Move.y * stats.Acceleration * Time.fixedDeltaTime;
 
-        //Limit rigidbody.velocity to MaxSpeed
-        if (rigidbody.velocity.magnitude > stats.MaxSpeed)
-        {
-            rigidbody.velocity = rigidbody.velocity.normalized * stats.MaxSpeed;
+            //Limit velocity to MaxSpeed
+            if (velocity.magnitude > stats.MaxSpeed)
+                velocity = velocity.normalized * stats.MaxSpeed;
+
+            rigidbody.velocity += velocity; 
         }
     }
 
     public void OnMove(InputValue value)
     {
         m_Move = value.Get<Vector2>();
+        onSlingshot = m_Move.y < 0f;
+
+        if (!onSlingshot)
+        {
+            slider.gameObject.SetActive(false);
+
+            rigidbody.AddForce(transform.up * stats.MaxPower * slider.value, ForceMode.Impulse);
+
+            slingshotOnCooldown = true;
+            slingshotCooldownTime = stats.ChargeCooldownTimer;
+
+            slider.value = 0f;
+            slingshotTime = 0f;
+        }
+        else
+        {
+            slider.gameObject.SetActive(true);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -17,3 +17,6 @@ MonoBehaviour:
   acceleration: 80
   maxSpeed: 5
   drag: 5
+  chargeTimer: 0.35
+  chargeCooldownTimer: 0.15
+  maxPower: 80
