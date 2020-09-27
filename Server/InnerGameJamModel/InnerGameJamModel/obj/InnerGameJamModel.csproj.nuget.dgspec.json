@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj": {}
+    "C:\\Users\\Sebastián\\Documents\\Github Repositories\\inner-gamejam-2020\\Server\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj": {
+    "C:\\Users\\Sebastián\\Documents\\Github Repositories\\inner-gamejam-2020\\Server\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastián\\Documents\\Github Repositories\\inner-gamejam-2020\\Server\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
         "projectName": "InnerGameJamModel",
-        "projectPath": "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
+        "projectPath": "C:\\Users\\Sebastián\\Documents\\Github Repositories\\inner-gamejam-2020\\Server\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
         "packagesPath": "C:\\Users\\Sebastián\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\obj\\",
+        "outputPath": "C:\\Users\\Sebastián\\Documents\\Github Repositories\\inner-gamejam-2020\\Server\\InnerGameJamModel\\InnerGameJamModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sebastián\\AppData\\Roaming\\NuGet\\NuGet.Config",

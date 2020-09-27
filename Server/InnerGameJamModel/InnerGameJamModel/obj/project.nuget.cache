@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WTRKBkHt143EFApFaxkilM4lrcbQRM6bziwNg0eFbIy4/LqEOHH1wQ7IoaICxjbvCpEYZ7co/eV0pGjdPAtamg==",
+  "dgSpecHash": "uUzlKL0ZTqSGrnV0dn8/4lI0hiJyGYQH0Q2u1Wv/Ok4uzf09rMmAoHQtmhIbC4w4YXiwHW9Egdio7l+onPxyLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
+  "projectFilePath": "C:\\Users\\Sebastián\\Documents\\Github Repositories\\inner-gamejam-2020\\Server\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sebastián\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Sebastián\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
