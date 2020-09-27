@@ -1,0 +1,14 @@
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\obj\Debug\InnerGameJamWebSocketClient.csprojAssemblyReference.cache
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\obj\Debug\InnerGameJamWebSocketClient.csproj.CoreCompileInputs.cache
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\InnerGameJamWebSocketClient.exe.config
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\InnerGameJamWebSocketClient.exe
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\InnerGameJamWebSocketClient.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\websocket-sharp.dll
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\websocket-sharp.xml
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\obj\Debug\InnerGameJamWebSocketClient.csproj.CopyComplete
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\obj\Debug\InnerGameJamWebSocketClient.exe
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\obj\Debug\InnerGameJamWebSocketClient.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\InnerGameJamModel.dll
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\InnerGameJamModel.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketClient\InnerGameJamWebSocketClient\bin\Debug\Newtonsoft.Json.xml

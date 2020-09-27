@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WTRKBkHt143EFApFaxkilM4lrcbQRM6bziwNg0eFbIy4/LqEOHH1wQ7IoaICxjbvCpEYZ7co/eV0pGjdPAtamg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sebastián\\source\\repos\\InnerGameJamModel\\InnerGameJamModel\\InnerGameJamModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sebastián\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Sebastián\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

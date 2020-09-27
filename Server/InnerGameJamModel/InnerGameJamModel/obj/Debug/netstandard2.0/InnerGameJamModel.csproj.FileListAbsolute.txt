@@ -1,0 +1,8 @@
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\bin\Debug\netstandard2.0\InnerGameJamModel.deps.json
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\bin\Debug\netstandard2.0\InnerGameJamModel.dll
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\bin\Debug\netstandard2.0\InnerGameJamModel.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\obj\Debug\netstandard2.0\InnerGameJamModel.AssemblyInfoInputs.cache
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\obj\Debug\netstandard2.0\InnerGameJamModel.AssemblyInfo.cs
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\obj\Debug\netstandard2.0\InnerGameJamModel.csproj.CoreCompileInputs.cache
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\obj\Debug\netstandard2.0\InnerGameJamModel.dll
+C:\Users\Sebastián\source\repos\InnerGameJamModel\InnerGameJamModel\obj\Debug\netstandard2.0\InnerGameJamModel.pdb

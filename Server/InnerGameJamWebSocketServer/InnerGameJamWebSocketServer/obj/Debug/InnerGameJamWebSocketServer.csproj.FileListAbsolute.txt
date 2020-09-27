@@ -1,0 +1,14 @@
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\InnerGameJamWebSocketServer.exe.config
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\InnerGameJamWebSocketServer.exe
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\InnerGameJamWebSocketServer.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\websocket-sharp.dll
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\websocket-sharp.xml
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\obj\Debug\InnerGameJamWebSocketServer.csprojAssemblyReference.cache
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\obj\Debug\InnerGameJamWebSocketServer.csproj.CoreCompileInputs.cache
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\obj\Debug\InnerGameJamWebSocketServer.csproj.CopyComplete
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\obj\Debug\InnerGameJamWebSocketServer.exe
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\obj\Debug\InnerGameJamWebSocketServer.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\InnerGameJamModel.dll
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\InnerGameJamModel.pdb
+C:\Users\Sebastián\source\repos\InnerGameJamWebSocketServer\InnerGameJamWebSocketServer\bin\Debug\Newtonsoft.Json.xml
