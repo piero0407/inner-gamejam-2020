@@ -26,6 +26,8 @@ public class EntityStats : ScriptableObject
     [SerializeField] float chargeCooldownTimer;
     [BoxGroup("Slingshot Stats"), Range(1, 300)]
     [SerializeField] float maxPower;
+    [BoxGroup("Invulnerable Stats"), Range(0.15f, 10)]
+    [SerializeField] float invulnerableTimer;
 
     public int MaxLives { get => maxLives; }
     public float AngularVelocity { get => angularVelocity; }
@@ -35,4 +37,5 @@ public class EntityStats : ScriptableObject
     public float ChargeTimer { get => chargeTimer; }
     public float ChargeCooldownTimer { get => chargeCooldownTimer; }
     public float MaxPower { get => maxPower; }
+    public float InvulnerableTimer { get => invulnerableTimer; }
 }

@@ -27,14 +27,15 @@ public class ScreenCollider : MonoBehaviour
         //For each Transform/Object in our Dictionary
         foreach (KeyValuePair<string, Transform> valPair in colliders)
         {
+            valPair.Value.gameObject.layer = LayerMask.NameToLayer("Wall");
             valPair.Value.gameObject.AddComponent<BoxCollider>(); //Add our colliders. Remove the "2D", if you would like 3D colliders.
             valPair.Value.name = valPair.Key + "Collider"; //Set the object's name to it's "Key" name, and take on "Collider".  i.e: TopCollider
             valPair.Value.parent = transform; //Make the object a child of whatever object this script is on (preferably the camera)
 
             if (valPair.Key == "Left" || valPair.Key == "Right") //Scale the object to the width and height of the screen, using the world-space values calculated earlier
-                valPair.Value.localScale = new Vector3(colThickness, screenSize.y * 2, colThickness);
+                valPair.Value.localScale = new Vector3(colThickness, screenSize.y * 2 + colThickness * 2, colThickness);
             else
-                valPair.Value.localScale = new Vector3(screenSize.x * 2, colThickness, colThickness);
+                valPair.Value.localScale = new Vector3(screenSize.x * 2 + colThickness * 2, colThickness, colThickness);
         }
         
         //Change positions to align perfectly with outter-edge of screen, adding the world-space values of the screen we generated earlier, and adding/subtracting them with the current camera position, as well as add/subtracting half out objects size so it's not just half way off-screen

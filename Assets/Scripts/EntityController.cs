@@ -11,6 +11,8 @@ public class EntityController : MonoBehaviour
     [FoldoutGroup("References")]
     [SerializeField] new Rigidbody rigidbody;
     [FoldoutGroup("References")]
+    [SerializeField] new MeshRenderer renderer;
+    [FoldoutGroup("References")]
     [SerializeField] Slider slider;
 
     [TabGroup("TabGroup1", "Stats")]
@@ -19,14 +21,30 @@ public class EntityController : MonoBehaviour
 
     [TabGroup("TabGroup1","Collision")]
     [SerializeField] LayerMask damageLayers;
+    [TabGroup("TabGroup1", "Collision")]
+    [SerializeField] LayerMask killLayers;
+
+    [TabGroup("TabGroup1", "Lifetime")]
+    [SerializeField] GameObject spawnOnDead;
+    [TabGroup("TabGroup1", "Lifetime")]
+    [SerializeField] Material baseMaterial;
+    [TabGroup("TabGroup1", "Lifetime")]
+    [SerializeField] Material weakenedMaterial;
 
     //Logic Variables
     float currentLives;
+
     Vector2 m_Move;
+
     float slingshotTime;
     float slingshotCooldownTime;
     bool slingshotOnCooldown;
     bool onSlingshot;
+
+    float invulnerableTime;
+    bool invulnerable;
+
+    [HideInInspector] public bool moveInputEnable = true;
 
     private void Awake()
     {
@@ -41,6 +59,16 @@ public class EntityController : MonoBehaviour
 
     private void Update()
     {
+        if(invulnerable)
+        {
+            invulnerableTime += Time.deltaTime;
+            if(invulnerableTime > stats.InvulnerableTimer)
+            {
+                invulnerableTime = 0f;
+                invulnerable = false;
+            }
+        }
+
         if (slingshotOnCooldown)
         {
             slingshotCooldownTime -= Time.deltaTime;
@@ -84,12 +112,14 @@ public class EntityController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        m_Move = value.Get<Vector2>();
-        onSlingshot = m_Move.y < 0f;
+        if (!moveInputEnable) return;
 
-        if (!onSlingshot)
+        m_Move = value.Get<Vector2>();
+
+        if (m_Move.y == 0f && onSlingshot)
         {
             slider.gameObject.SetActive(false);
+            invulnerable = true;
 
             rigidbody.AddForce(transform.up * stats.MaxPower * slider.value, ForceMode.Impulse);
 
@@ -99,10 +129,11 @@ public class EntityController : MonoBehaviour
             slider.value = 0f;
             slingshotTime = 0f;
         }
-        else
-        {
+        
+        if(m_Move.y < 0f && !onSlingshot)
             slider.gameObject.SetActive(true);
-        }
+
+        onSlingshot = m_Move.y < 0f;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -111,6 +142,43 @@ public class EntityController : MonoBehaviour
         {
             //TODO: Collision Logic
             print("I collided with something!!!");
+            if(!invulnerable)
+            {
+                CheckLives();
+            }
+        }
+
+        if (((1 << collision.gameObject.layer) & killLayers.value) > 0)
+        {
+            //TODO: Collision Logic
+            print("I collided with walls!!!");
+            if (!invulnerable)
+            {
+                CheckLives();
+            }
+            else
+            {
+                SpawnBlackHole();
+            }
+        }
+    }
+
+    private void SpawnBlackHole()
+    {
+        Instantiate(spawnOnDead, transform.position, transform.rotation, transform.parent);
+        Destroy(gameObject);
+    }
+
+    private void CheckLives()
+    {
+        currentLives--;
+        if(currentLives == 1)
+        {
+            renderer.sharedMaterial = weakenedMaterial;
+        }
+        else if (currentLives == 0)
+        {
+            SpawnBlackHole();
         }
     }
 }
