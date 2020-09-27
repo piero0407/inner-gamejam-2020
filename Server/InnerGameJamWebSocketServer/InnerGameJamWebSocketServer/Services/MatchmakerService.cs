@@ -13,13 +13,6 @@ using WebSocketSharp.Server;
 
 namespace InnerGameJamWebSocketServer.Services
 {
-    public static class GameServer
-    {
-        public static Game game = new Game();
-        public static Dictionary<string, long> sessions;
-        public static int globalId = 0; 
-    }
-
     class MatchmakerService : WebSocketBehavior
     {
         // Overrides
@@ -33,7 +26,7 @@ namespace InnerGameJamWebSocketServer.Services
                 type = GameConstants.MessageType.PLAYER_JOIN,
                 player = newPlayer
             };
-            GameServer.sessions.Add(this.ID, newPlayer.Id);
+            GameServer.sessions.Add(this.ID, this);
             string joinUpdate = JsonConvert.SerializeObject(messageJoin);
             Sessions.Broadcast(joinUpdate);
             //Send(joinUpdate);
@@ -64,11 +57,21 @@ namespace InnerGameJamWebSocketServer.Services
             // Console.WriteLine(ID);
             Sessions.Broadcast(gameUpdate);
             //Send(msg);
-
+        }
+        protected override void OnClose(CloseEventArgs e)
+        {
+            GameServer.sessions.Remove(this.ID);
         }
         // Game functions
-        private void InitializeGame()
+        private static void InitializeGame()
         {
+            foreach (KeyValuePair<string, WebSocketBehavior> behavior in GameServer.sessions)
+            {
+                if (behavior.Value.State == WebSocketState.Closed)
+                {
+                    GameServer.sessions.Remove(behavior.Value.ID);
+                }
+            }
             foreach (Player player in GameServer.game.Players)
             {
                 player.Status = GameConstants.PlayerStatus.ACTIVE;
@@ -87,7 +90,7 @@ namespace InnerGameJamWebSocketServer.Services
             return Interlocked.Increment(ref GameServer.globalId);
         }
 
-        public Tuple<double, double> GetRandomPosition()
+        public static Tuple<double, double> GetRandomPosition()
         {
             Random random = new Random();
             Tuple<double, double> position = new Tuple<double, double>(random.NextDouble() * (GameConstants.maxX - GameConstants.minX) + GameConstants.minX,
