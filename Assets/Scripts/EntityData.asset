@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: EntityData
   m_EditorClassIdentifier: 
   maxLives: 2
-  angularVelocity: 250
-  acceleration: 50
-  maxSpeed: 4.5
-  drag: 4
-  chargeTimer: 0.35
-  chargeCooldownTimer: 0.15
-  maxPower: 80
-  invulnerableTimer: 2
+  angularVelocity: 175
+  acceleration: 20
+  maxSpeed: 1
+  drag: 5
+  chargeTimer: 1
+  chargeCooldownTimer: 5
+  maxPower: 15
+  invulnerableTimer: 1

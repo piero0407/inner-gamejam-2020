@@ -334,9 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1414b40c2ef99e04da53ba02d96508be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addMass: 1.5
-  destroyTimer: 0.5
-  rateOfGrowth: 0.0001
+  addMass: 0.75
+  destroyTimer: 0.65
+  rateOfGrowth: 0.1
   layerMask:
     serializedVersion: 2
     m_Bits: 256
